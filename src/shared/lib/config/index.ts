@@ -1,1 +1,0 @@
-export { privateConfig } from './private'
