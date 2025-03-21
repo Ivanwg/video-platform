@@ -1,7 +1,7 @@
 import { dbClient } from '@/shared/lib/db'
 import { UserEntity, UserId } from '../_domain/types'
 
-export class UserRepository {
+class UserRepository {
   async getUserById(userId: UserId): Promise<UserEntity> {
     return dbClient.user.findUniqueOrThrow({
       where: {
