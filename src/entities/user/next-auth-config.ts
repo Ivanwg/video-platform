@@ -8,7 +8,7 @@ import { privateConfig } from '@/shared/config'
 import { createUserUseCase } from './_use-cases/create-user'
 import { UserEntity } from './_domain/types'
 
-const prismaAdapter = PrismaAdapter(dbClient);
+const prismaAdapter = PrismaAdapter(dbClient)
 
 export const nextAuthConfig: AuthOptions = {
   // adapter: PrismaAdapter(dbClient),

@@ -2,7 +2,7 @@ import { SessionEntity, UserEntity, UserId } from '../_domain/types'
 // import { userRepository } from "../_repositories/user";
 import { userRepository } from '../_repositories'
 import { createUserAbility } from '../_domain/ability'
-import { AuthorizatoinError } from "@/shared/lib/errors";
+import { AuthorizatoinError } from '@/shared/lib/errors'
 
 type GetUser = {
   userId: UserId
@@ -14,7 +14,7 @@ export class GetUserUseCase {
     const userAbility = createUserAbility(session)
 
     if (!userAbility.canGetUser(userId)) {
-      throw new AuthorizatoinError();
+      throw new AuthorizatoinError()
     }
 
     return await userRepository.getUserById(userId)

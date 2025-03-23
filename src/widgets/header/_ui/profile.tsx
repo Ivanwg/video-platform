@@ -14,7 +14,7 @@ import { LogOut, User } from 'lucide-react'
 import Link from 'next/link'
 import { useSignOut, SignInButton } from '@/features/auth'
 import { useAppSession } from '@/entities/user'
-import { ProfileAvatar, getProfileDisplayName } from "@/entities/user/profile";
+import { ProfileAvatar, getProfileDisplayName } from '@/entities/user/profile'
 
 export function Profile() {
   const session = useAppSession()
@@ -37,7 +37,7 @@ export function Profile() {
           variant='ghost'
           className='p-px rounded-full self-center h-8 w-8'
         >
-          <ProfileAvatar profile={user} className="w-8 h-8" />
+          <ProfileAvatar profile={user} className='w-8 h-8' />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className='w-56 mr-2 '>
